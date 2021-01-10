@@ -7,7 +7,7 @@ An API make with Symphony 5.2 and the package wkhtml 0.12.
 
 ## Usage
 
-After create database (you can use the sql file provided at the root) and configure your mail service in .env.local file (I used Mailtrap.io).
+After create database (you can use the sql file provided at the root) and configure your mail service in a new created .env.local file (I used Mailtrap.io).
 
 Please go to PostMan or the tool you want to make a HTTP POST request to the route /api/order with a object in parameter (I use parameters : Body, Raw and JSON in PostMan)
 
