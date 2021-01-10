@@ -1,19 +1,9 @@
 # Api-test
 An API returns a mail with pdf file attached for Php Symfony 5.2
 
-## Installation
+## Description
 
-Use the packages manager :
-
-** Symfony 5.2
-
-``$ wget https://get.symfony.com/cli/installer/installer -O - | bash``
-
-** wkhtmltopdf 0.12 for generate pdf (ubuntu 18 version)
-
-``$ wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb``
-``$ dpkg wkhtmltox_0.12.6-1.bionic_amd64.deb``
-
+An API make with Symphony 5.2 and the package wkhtml 0.12.
 
 ## Usage
 
