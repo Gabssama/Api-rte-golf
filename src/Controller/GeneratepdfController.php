@@ -1,5 +1,9 @@
 <?php
 
+/* TODO 
+ * Add HTML code in 'generatepdf/pdf.html.twig' for display more information to the customer
+ */
+
 namespace App\Controller;
 
 use Knp\Snappy\Pdf;
