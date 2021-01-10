@@ -8,6 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
+
 class GeneratepdfController extends AbstractController
 {
     
@@ -23,6 +24,12 @@ class GeneratepdfController extends AbstractController
      * @Route("/generatepdf", name="generatePdf", methods={"GET"})
      */
 
+    /**
+     * @param array $products array of ids
+     * @param string $filename name of pdf file
+     * @return boolean 
+     */
+    
     public function pdfCreate($products, $filename)
     {
            
@@ -34,7 +41,7 @@ class GeneratepdfController extends AbstractController
                     'products' => $products
                 )
             ),
-            'var/cache/pdf/'.$filename.'.pdf'
+            'pdf-temp/'.$filename.'.pdf'
         );
 
         return true;

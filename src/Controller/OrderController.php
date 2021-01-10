@@ -16,6 +16,7 @@ class OrderController extends AbstractController
     /**
      * @Route("/api/order", name="order", methods={"POST"})
      */
+
     public function index(Request $request, ProductRepository $productRepository, MailerController $sendMail): Response
     {
         $order = $request->toArray();
@@ -25,7 +26,6 @@ class OrderController extends AbstractController
         $client_mail = $order['mail'];
         $filename = strtolower($client_name).'-'.uniqid();
        
-        // $sendMail = new MailerController();
         $sendMail->orderEmail($client_mail, $filename, $products);
 
         if($sendMail){

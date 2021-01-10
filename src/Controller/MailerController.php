@@ -28,25 +28,28 @@ class MailerController extends AbstractController
         $this->pdf = $pdf;
     }
 
+    /**
+     * @param string $mail customer's email
+     * @param array $products array of ids
+     * @param string $filename name of pdf file
+     * @return boolean 
+     */
+    
     public function orderEmail($mail, $filename, $products)
     {
         
         $pdf = $this->pdf->pdfCreate($products, $filename);
 
         if($pdf){
-            // $email = (new Email())
-            //     ->from('no-reply@golf-api.com')
-            //     ->to($mail)
-            //     ->subject('Thanks for your order')
-            //     ->html('<p>See Twig integration for better HTML integration!</p>')
-            //     ->attachFromPath("var/cache/pdf/".$filename.'.pdf');
-    $email = (new TemplatedEmail())
-    ->from('no-reply@golf-api.com')
-    ->to(new Address($mail))
-    ->subject('Thanks for your order')
-    ->htmlTemplate('generatepdf/index.html.twig')
-;
+               
+            $email = (new TemplatedEmail())
+            ->from('no-reply@golf-api.com')
+            ->to(new Address($mail))
+            ->subject('Thanks for your order')
+            ->htmlTemplate('generatepdf/index.html.twig')
+            ->attachFromPath("pdf-temp/".$filename.'.pdf');
             $this->mailer->send($email);
+
             return true; 
         }else{
             return ("Erreur ! L'email n'a pas pu vous être envoyé.");
@@ -54,12 +57,3 @@ class MailerController extends AbstractController
     }
 }
 
-$email = (new TemplatedEmail())
-    ->from('no-reply@golf-api.com')
-    ->to(new Address($mail))
-    ->subject('Thanks for your order')
-    ->htmlTemplate('mailer/index.html.twig')
-    ->context([
-        'client_name' => $client_name
-    ])
-;
