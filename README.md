@@ -19,7 +19,7 @@ Example : "{
     "mail":"dupont@gmail.com"
 }"
 
-You'll receive a success message and a mail with pdf file attaches of your products.
+You'll receive a success message and a mail with pdf file attached of your products.
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
