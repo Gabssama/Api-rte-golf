@@ -11,11 +11,9 @@ Use the packages manager :
 
 ** wkhtmltopdf 0.12 for generate pdf (ubuntu 18 version)
 
-``$ wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb`` 
+``$ wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb``
+``$ dpkg wkhtmltox_0.12.6-1.bionic_amd64.deb``
 
-** Api-platform
-
-``$ composer require api``
 
 ## Usage
 
